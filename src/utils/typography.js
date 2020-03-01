@@ -1,9 +1,9 @@
 import Typography from "typography"
-import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerFontFamily: [
+    "Roboto",
     "Avenir Next",
     "Helvetica Neue",
     "Segoe UI",
@@ -11,6 +11,6 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Georgia", "serif", "Roboto"],
+  bodyFontFamily: ["Roboto","Georgia", "serif", "Roboto"],
 })
-export default typography
+export default typography;

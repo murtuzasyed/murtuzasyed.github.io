@@ -4,7 +4,7 @@ import Navigation from "./Navigation"
 import Main from "./Main"
 import classnames from "classnames"
 import SectionHeader from "./SectionHeader"
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
 import NameTitle from "./NameTitle";
 import Footer from "./Footer";
 const activeClasses = (defaultClasses, slidePanelOut) =>

@@ -1,3 +1,8 @@
+html, body {
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 1.8em;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -75,6 +80,7 @@ nav ul li {
   border-radius: 4px;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    margin: 20px;
 }
 .navigation ul li a {
   transition: none;
@@ -87,7 +93,7 @@ nav ul li {
   height: 100%;
 }
 .main footer {
-  background-color:rgb(35, 47, 62);
+  background-color: rgb(35, 47, 62);
   color: #fff;
   padding: 8px;
   text-align: center;
@@ -132,11 +138,18 @@ p {
   max-width: 1280px;
   width: 90%;
 }
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: space-between;
+}
 .wrapper h1 {
   font-size: 3em;
   color: rgba(0, 0, 0, 0.87);
 }
-h2, h3 {
+h2,
+h3 {
   color: rgba(0, 0, 0, 0.87) !important;
 }
 
@@ -153,7 +166,6 @@ h3 {
   font-size: 1em !important;
   line-height: 1em !important;
 }
-
 
 #menu {
   padding: 15px;
@@ -199,6 +211,11 @@ h3 {
     width: 8em;
   }
 }
+.exp-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 
 @media only screen and (max-width: 1024px) {
   .navigation {
@@ -226,4 +243,16 @@ h3 {
 
 .name-title h1 {
   font-size: 1.25em;
+}
+
+.company-logo {
+  width: 5em;
+}
+
+.exp-section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }

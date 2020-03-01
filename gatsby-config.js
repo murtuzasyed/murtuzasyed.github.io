@@ -5,13 +5,31 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title:  'Murtuza Syed'
+  },
   plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          // `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-responsive-image`,
+            options: {
+              maxWidth: 590
+            },
+          }
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        name: 'src',
+        path: `${__dirname}/src/`,
       },
     },
     { 
@@ -28,6 +46,6 @@ module.exports = {
           },
         ],
       },
-    },
+    }
   ],
 }
