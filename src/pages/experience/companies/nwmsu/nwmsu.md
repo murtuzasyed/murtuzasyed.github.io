@@ -1,41 +1,26 @@
 ---
 path: /experience/nwmsu
 priority: 1
-companyName: "Northwest Missouri State University"
+companyName: Northwest Missouri State University
+companyLocation: Maryville, MO
 previewImage: nwmsu.jpg
-start: August 2011,
-end: August 2012,
+duration: August 2011 - August 2012
 role: Graduate Assistant
 ---
 
-## Responsibilities
-1. Analyze, design, code, debug, test and modify new software or enhancements while considering software abilities
-2. Provide high-level architecture guidance and develop specifications to resolve software problems
-3. Debug complicated issues that span multiple modules, involve complex concurrency or low-level problems
-4. Propose and lead process improvements projects for development, deployment or application monitoring      
-5. Share knowledge within team through mentorship, coaching, technical talks and blogs    
+### Responsibilities
+1. Manage Programming Labs hours by creating practice problems and providing assistance in learning skills and techiniques required to solve them
+2. Research on newer technologies that can be added to the Computer program. One such research included introducing Source code control process using svn and bazaar.
+3. Mentored high school students on how to learn computer programming by using user friendly tools like [Scratch](https://scratch.mit.edu/).
+4. Assisted Professors during class hours and in grading examinations.    
 
 
-## Projects
+### Projects
 
-### CCL Whitelist API
+1. Catapult QMS(mobile) - Created a mobile optimized web application for [Catapult International's](https://gocatapult.com/) adobe flex web application. Used jQuery mobile, Javascript, HTML, CSS, PHP.
 
-### Whitelist Manager
+2. Quiz Database - Created a windows application that aided the Professor in creating exam quiz.
 
+### Technologies/Tooling
 
-### Component Template Generator
-
-### MPages Ordering Components
-
-### Architectural Enhancements
-
-
-## Technologies/Tooling
-
-JavaScript(ES6), CSS, HTML, ReactJs, jQuery, NodeJS, Java(EE), Ruby On Rails, SQL(CCL), Webpack, Karma, Jasmine, Babel
-
-## Achievements
-
-1. Won Cerner's internal coding competiotion [ShipIt-XIII](https://engineering.cerner.com/blog/shipit-xiii/)
-
-2. Won Toastmaster's speech contest at club level. 
+JavaScript, jQuery, jQuery Mobile, PHP, CSS, HTML, SVN, Bazaar, C#, Java, Java AWT, Java ME(MIDP) 

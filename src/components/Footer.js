@@ -1,5 +1,5 @@
 import React from "react";
-
+import Credits from "./Credits";
 export default () => (
-    <footer>Created with love, Powered by Gatsby</footer>
+    <footer><Credits /></footer>
 )

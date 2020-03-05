@@ -5,10 +5,13 @@ const activeClasses = (defaultClasses, slidePanelOut) =>
   clasnames(...defaultClasses, {
     "slide-panel-out": slidePanelOut,
   })
-export default ({ slidePanelOut, children }) => {
+export default ({ slidePanelOut, children, sectionTitle }) => {
   return (
     <div id="main" className={activeClasses(["main"], slidePanelOut)}>
-      {children}
+      <div className="main-body">
+        {sectionTitle ? <h1>{sectionTitle}</h1> : null}
+        {children}
+      </div>
       <Footer />
     </div>
   )

@@ -1,73 +1,48 @@
-// import React from "react"
-// import Layout from "../../components/Layout"
-// import ExperienceSection from "../../components/ExperienceSection"
-// import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
+import Layout from "../../components/Layout"
+import ExperienceSection from "../../components/ExperienceSection"
+import { graphql } from "gatsby"
 
-// export default ({ data }) => {
-//   const experiences = data.markdownRemark
-//   return (
-//     <Layout sectionTitle="Experience">
-//       <h1>Experience</h1>
-//       {data.allMarkdownRemark.edges.map(({ node }) => (
-//         <section id="experience" key={node.id} className="experience-container">
-//           <ExperienceSection
-//             // companyLogo={`${node.frontmatter.previewImage.childImageSharp.responsiveSizes.src}`}
-//             companyName={node.frontmatter.companyName}
-//             role={node.frontmatter.companyName}
-//           />
-//         </section>
-//       ))}
-//     </Layout>
-//   )
-// }
+export default ({ data }) => {
+  return (
+    <Layout sectionTitle="Experience">
+      {data.allMarkdownRemark.edges.map(
+        ({ node: { id, frontmatter, html } }) => (
+          <section id="experience" key={id} className="experience-container main-section">
+            <ExperienceSection
+              companyName={frontmatter.companyName}
+              role={frontmatter.role}
+              companyLocation={frontmatter.companyLocation}
+              duration={frontmatter.duration}
+              html={html}
+            />
+          </section>
+        )
+      )}
+    </Layout>
+  )
+}
 
-// export const query = graphql`
-//   query ExperienceQuery {
-//     allMarkdownRemark(
-//       filter: { fileAbsolutePath: { regex: "/companies/" } }
-//       sort: { fields: [frontmatter___priority], order: DESC }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             priority
-//             companyName
-//             start
-//             end
-//             role
-//             path
-//           }
-//           excerpt
-//         }
-//       }
-//     }
-//   }
-// `
-
-// // import React from "react"
-// // import { graphql } from "gatsby"
-
-// // const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
-
-// // export const query = graphql`
-// //   {
-// //     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/companies/"}, html: {}}, sort: {fields: [frontmatter___priority], order: DESC}) {
-// //       edges {
-// //         node {
-// //           id
-// //           html
-// //           frontmatter {
-// //             priority
-// //             companyName
-// //             start
-// //             end
-// //             role
-// //             path
-// //           }
-// //           excerpt
-// //         }
-// //       }
-// //     }
-// //   }
-// // `
+export const query = graphql`
+  query ExperienceQuery {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/companies/" } }
+      sort: { fields: [frontmatter___priority], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            priority
+            companyName
+            companyLocation
+            duration
+            role
+            path
+          }
+        }
+      }
+    }
+  }
+`
