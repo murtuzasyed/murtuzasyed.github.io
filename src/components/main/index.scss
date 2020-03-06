@@ -1,0 +1,25 @@
+@import "../../styles/mixins/responsive.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/directions.scss";
+
+.main {
+    @include transitionEase(0.5s);
+    @include flex-grow(1);
+    @include flex-basis(100%);
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    padding-left: 16em;
+    .main-body {
+        margin: 2em;
+        section {
+            margin-bottom: 1.5em;
+        }
+    }
+    footer {
+        background-color: $header-footer-color;
+        color: $white;
+        padding: 1em;
+      }
+}

@@ -1,0 +1,25 @@
+@import "../../styles/mixins/responsive.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/directions.scss";
+
+.portfolio-header {
+    @include flexbox();
+    background-color: $header-footer-color;
+    color: $white;
+    @include transitionEase(0.5s);
+    @include respond-to("large", null) {
+        display: none;
+      }
+      h2 {
+          color: $white !important;
+          font-size: 2em;
+          margin-bottom: 0;
+      }
+      .menu {
+          padding: 1em;
+      }
+      .header-name-title {
+        @include flex-grow(1);
+      }
+}

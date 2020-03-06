@@ -1,0 +1,10 @@
+@import "../../styles/mixins/responsive.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+.name-title {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  

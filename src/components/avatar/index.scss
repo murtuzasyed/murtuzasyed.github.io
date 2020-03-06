@@ -1,0 +1,14 @@
+@import "../../styles/mixins/responsive.scss";
+.avatar {
+  width: 8em;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  @include respond-to(
+    "large",
+    (
+      "min-width": "768px",
+    )
+  ) {
+    width: 10em;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout"
 import ExperienceSection from "../../components/ExperienceSection"
 import { graphql } from "gatsby"
+import "./index.scss";
 
 export default ({ data }) => {
   return (

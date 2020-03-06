@@ -1,0 +1,16 @@
+
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+.contact-item {
+    @include flexbox();
+    @include align-items(center);
+    margin-bottom: 2em;
+    svg:hover {
+        fill: $black
+    }
+    a {
+        padding-left: 1em;
+    }
+  }
+
+  

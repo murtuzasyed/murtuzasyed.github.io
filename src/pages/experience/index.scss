@@ -1,0 +1,33 @@
+@import "../../styles/mixins/responsive.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/directions.scss";
+
+.exp-section {
+  .exp-section-header {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 0;
+    }
+    padding-bottom: 1em;
+    @include align-items(center);
+  }
+  @include respond-to("small", null) {
+    h3 {
+      font-size: 1em;
+    }
+    h4 {
+      font-size: 0.8em;
+    }
+
+    .exp-section-header {
+      @include flex-direction(column);
+      @include align-items(center);
+    }
+  }
+}

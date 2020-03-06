@@ -1,0 +1,8 @@
+@mixin text-align($direction) {
+    text-align:$direction
+}
+
+@mixin transitionEase($duration) {
+    transition: transform $duration ease;
+}
+  

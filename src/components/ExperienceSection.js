@@ -1,19 +1,18 @@
 import React from "react"
-import Card from "./Card"
-import Img from "gatsby-image"
-
+import Card from "./card"
 export default props => {
   return (
     <Card>
       <div className="exp-section">
-        <div className="exp-section-header light-border">
-          <div className="primary-text">{props.companyName}</div>
-          <div className="secondary-text">{props.role}</div>
-          <div className="secondary-text">
+        <div className="exp-section-header">
+          <h2>{props.companyName}</h2>
+          <h3>{props.role}</h3>
+          <h4>
             {props.duration}
-          </div>
-          <div>{props.companyLocation}</div>
+          </h4>
+          <h4>{props.companyLocation}</h4>
         </div>
+        <hr />
         <div
           className="exp-section-body light-border"
           dangerouslySetInnerHTML={{ __html: props.html }}

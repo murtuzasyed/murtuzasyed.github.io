@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins/responsive.scss";
+footer {
+  .credits {
+    @include flexbox();
+    @include justify-content(space-between);
+    span {
+      @include respond-to("small", null) {
+        font-size: 0.75em !important;
+      }
+    }
+  }
+}

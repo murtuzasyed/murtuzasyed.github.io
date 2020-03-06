@@ -1,30 +1,30 @@
 import React, { useState } from "react"
-import Header from "./Header"
-import Navigation from "./Navigation"
-import Main from "./Main"
+import Header from "./header"
+import Navigation from "./navigation"
+import Main from "./main"
 import classnames from "classnames"
 
-const activeClasses = (defaultClasses, slidePanelOut) =>
+const activeClasses = (defaultClasses, navigationOut) =>
   classnames(...defaultClasses, {
-    "slide-panel-out": slidePanelOut,
+    "navigation-out": navigationOut,
   })
 
 export default props => {
-  const [slidePanelOut, setSlidePanelOut] = useState(false)
+  const [navigationOut, setNavigationOut] = useState(false)
   return (
-    <div className={activeClasses(["wrapper", "background"], slidePanelOut)}>
+    <div className={activeClasses(["wrapper"], navigationOut)}>
       <div
         id="navigation"
-        className={activeClasses(["navigation"], slidePanelOut)}
+        className={activeClasses(["navigation"], navigationOut)}
       >
         <Navigation />
       </div>
       <Header
         name="Murtuza Syed"
         title="Full Stack Developer"
-        menuClickHandler={() => setSlidePanelOut(!slidePanelOut)}
+        menuClickHandler={() => setNavigationOut(!navigationOut)}
       />
-      <Main slidePanelOut={slidePanelOut} sectionTitle={props.sectionTitle}>
+      <Main navigationOut={navigationOut} sectionTitle={props.sectionTitle}>
         {props.children}
       </Main>
     </div>
