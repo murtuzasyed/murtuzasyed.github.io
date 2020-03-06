@@ -1,3 +1,3 @@
 # MurtuzaSyed.com
 
-Personal Portfolio built from scratch using GatsbyJS, ReactJS, GraphQL, SASS and JavaScript and no CSS libraries.
+Personal Responsive Portfolio built from scratch using GatsbyJS, ReactJS, GraphQL, SASS without any css frameworks.
